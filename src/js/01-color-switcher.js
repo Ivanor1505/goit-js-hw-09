@@ -15,8 +15,6 @@ function onStart() {
     console.log(intervalId);
  };
 
-
-
 function onStop() {
     clearInterval(intervalId);
   start.disabled = false;
