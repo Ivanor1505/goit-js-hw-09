@@ -33,10 +33,10 @@ promises.push(createPromise(i, currentDelay))
   }
 
   promises.forEach((promise) => {
-    promise.then(({ position, delayValue }) =>
-    { Notify.success(`✅ Fulfilled promise ${position} in ${delayValue}ms`); })
-      .catch(({ position, delayValue }) => {
-         Notify.failure(`❌ Rejected promise ${position} in ${delayValue}ms`);
+    promise.then(({ position, delay }) =>
+    { Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`); })
+      .catch(({ position, delay }) => {
+         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
       });
 };
