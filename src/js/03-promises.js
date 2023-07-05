@@ -28,7 +28,7 @@ function onSubmit(e) {
   const promises = [];
 
   for (let i = 1; i <= amountValue; i += 1){
-    const currentDelay = delayValue + i * stepValue;
+    const currentDelay = delayValue + (i - 1) * stepValue;
 promises.push(createPromise(i, currentDelay))
   }
 
